@@ -30,10 +30,7 @@ def find_bags_part_1(next_bag, all_bags):
             find_bags_part_1(each, all_bags)
 
 total = set()
-for each in contained_by['shiny gold']:
-    total.add(each)
-    find_bags_part_1(each, total)
-
+find_bags_part_1('shiny gold', total)
 print(len(total))
 
 def find_bags_part_2(key):
